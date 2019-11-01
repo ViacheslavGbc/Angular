@@ -7,11 +7,16 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+// import the feature module here so you can add it to the imports array below
+import { CustomerDashboardModule } from './customer-dashboard/customer-dashboard.module';
+
+
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    CustomerDashboardModule, // add the feature module here
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
     ])
